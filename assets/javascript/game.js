@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-// GLOBAL VARIABLES
+// ********** GLOBAL VARIABLES
 
 var wins = 0;
 var losses = 0;
@@ -11,8 +11,9 @@ var gem2 = 0;
 var gem3 = 0;
 var gem4 = 0;
 
-// FUNCTIONS
+// *********** FUNCTIONS
 
+//randomize crystals + target score
 var getRandom = function(min, max) {
     return Math.floor(Math.random()*(max-min+1)+min);
     }
@@ -20,62 +21,60 @@ var getRandom = function(min, max) {
 //restart game
 var startGame = function() {
     //reset current score
-    $(".score").html = 0;
+    console.log("we start game");
     //set new target score (19 - 120)
     randomNum = getRandom (19, 120);
-    //$(".random").html = getRandom (19,120);
+    currentScore = 0;
+    $(".score").html(currentScore);
+    $(".random").html(randomNum);
     //set different values for each crystal (1 - 12)
+    $("#winsTotal").html(wins);
+    $("#lossTotal").html(losses);
     gem1 = getRandom(1,12);
     gem2 = getRandom(1,12);
     gem3 = getRandom(1,12);
     gem4 = getRandom(1,12);
 }
 
-//determining a win or loss
-var winlose = function () {
+//determining a win or a loss
+var winlose = function() {
+    //console.log("win loss", currentScore, randomNum);
     if (currentScore === randomNum) {
+        console.log("you win!");
         wins++;
         startGame();
     } else if (currentScore > randomNum) {
+        console.log("you lose!");
         losses++;
         startGame();
     }
 }
 
-// MAIN PROCESS
+// ********** MAIN GAMEPLAY
 startGame();
-
-$(".score").html(currentScore);
-$(".random").html(randomNum);
-$(".win-loss.p:first").html(wins);
-$(".win-loss.p:last").html(losses);
 
 $("#gem1").click(function() {
     currentScore += gem1;
-    winlose;
-    console.log(currentScore);
-    
+    winlose();
+    $(".score").html(currentScore);
   });
 
 $("#gem2").click(function() {
     currentScore += gem2;
-    winlose;
-    console.log(currentScore);
-
+    winlose();
+    $(".score").html(currentScore);
   });
 
 $("#gem3").click(function() {
     currentScore += gem3;
-    winlose;
-    console.log(currentScore);
-    
+    winlose();
+    $(".score").html(currentScore);    
   });
 
 $("#gem4").click(function() {
     currentScore += gem4;
-    winlose;
-    console.log(currentScore);
-    
+    winlose();
+    $(".score").html(currentScore);    
   });
 
   

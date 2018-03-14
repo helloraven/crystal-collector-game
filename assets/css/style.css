@@ -1,0 +1,84 @@
+
+.body {
+    background: url("../images/regal.png");
+}
+
+h1:first-child {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#header {
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+#rules {
+    background: white;
+    margin: 50px 50px 30px;
+    display: block;
+    padding: 25px;
+    width: 500px;
+    font-size: 18px;
+}
+
+#main {
+    background: white;
+    margin: 5px 50px 30px;
+    display: block;
+    padding: 25px;
+    width: 500px;
+}
+
+.random {
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    background: black;
+    width: 150px;
+    height: 75px;
+    margin: 10px 10px 10px 10px;
+    float: left;
+    
+    
+}
+
+.score {
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+    background: yellow;
+    width: 150px;
+    height: 75px;
+    margin: 10px 10px 10px 10px;
+    float: left;
+}
+
+.win-loss {
+    font-size: 20px;
+    font-weight: 600;
+    background: white;
+    width: 100px;
+    height: 75px;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+
+}
+
+#gems {
+    background: black;
+    margin: 5px 50px 0px;
+    display: block;
+    padding: 25px;
+    width: 500px;
+}
+
+.button {
+    background: black;
+    border: 0px;
+}
+
+
+
+
+
